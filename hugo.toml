@@ -54,6 +54,10 @@ enableGitInfo = true
      autoHeadingIDType = "blackfriday"
    [markup.goldmark.renderer]
      unsafe = true
+   [markup.goldmark.extensions.cjk]
+     eastAsianLineBreaks = true
+     eastAsianLineBreaksStyle = "css3draft"
+     enable = true
   [markup.highlight]
     codeFences = true
     guessSyntax = false
@@ -73,7 +77,8 @@ enableGitInfo = true
 date = ["date", ":filename", "publishDate", "lastmod"]
 
 [permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
+  [permalinks.page]
+    blog = "/:section/:year/:month/:day/:slug/"
 
 [sitemap]
   filename = "sitemap.xml"
